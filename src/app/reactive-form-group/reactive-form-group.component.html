@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3">
+    </div>
+  <div class="card col-lg-6">
+    <div class="card-header">
+      FormGroup
+    </div>
+    <div class="card-body">
+    <form action="" class="form" [formGroup]="champForm" (ngSubmit)="sendForm()">
+    <label for="name-champ" class="form-label">Name Champ:</label>
+    <input type="text" id="name-champ" placeholder="Name" formControlName="nameChamp" class="form-control">
+    <label for="position-champ">Position:</label>
+    <input type="text" id="position-champ" formControlName="positionChamp" class="form-control" placeholder="Position">
+    <p class="mt-2">Complete the information! :v</p>
+    <button type="submit" class="btn btn-danger mt-1" [disabled]="!champForm.valid">Send</button>
+   </form>
+    </div>
+    <div class="card-footer">
+    </div>
+  </div>
+  <div class="col-lg-3">
+  </div>
+
+  </div>
+  
+</div>

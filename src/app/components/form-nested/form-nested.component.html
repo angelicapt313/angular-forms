@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3"></div>
+    <div class="card col-lg-6">
+      <div class="card-header">
+
+      </div>
+
+      <div class="card-body">
+        <form action="" class="form" [formGroup]="profilePersonForm" (ngSubmit)="btnSend()">
+          <label for="weight-person" class="form-label">Name:</label>
+          <input type="text" class="form-control" placeholder="Name" formControlName="namePerson">
+          <div formGroupName="infoBody">
+            <h4 class="mt-3">Info Body</h4>
+            <label for="">Arm:</label>
+          <input type="number" placeholder="Arm" class="form-control" formControlName="dataArm">
+          <label for="">Chest:</label>
+          <input type="number" class="form-control" placeholder="Chest" formControlName="dataChest">
+          <label for="data-waist">Waist:</label>
+          <input id="data-waist" type="number" class="form-control" placeholder="Waist" formControlName="dataWaist" >
+          <label for="data-hip">Hip</label>
+          <input type="number" id="data-hip" placeholder="Hip" class="form-control" formControlName="dataHip">
+          <label for="data-hip" class="form-label">Leg
+          </label>
+          <input type="number" placeholder="Leg" class="form-control" formControlName="dataLeg">
+          <label for="">Calf</label>
+          <input type="number" class="form-control" placeholder="Number" formControlName="dataCalf">
+          </div>
+          <button type="submit" class="btn btn-outline-primary mt-2" [disabled]="!profilePersonForm.valid">Send</button>
+          <button type="button" (click)="updateData()" class="btn btn-outline-secondary mt-2"> Update </button>
+        </form>
+      </div>
+      <div class="card-footer">
+
+      </div>
+    </div>
+    <div class="col-lg-3"></div>
+  </div>
+</div>
+
+<p>Form Status: {{profilePersonForm.status}}</p>
